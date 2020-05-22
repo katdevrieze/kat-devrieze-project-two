@@ -8,49 +8,49 @@
     <link rel="icon" type="image/svg" href="./assets/camera-favicon.svg">
     <script src="https://kit.fontawesome.com/a9bc7af8fb.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header>
+<body class="main-page">
+    <header class="header">
         <div class="wrapper">
             <nav class="header__nav">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="header__title">
-                <h1>Captured</h1>
-            </div>
-            <div class="header__image-container">
+            <h1 class="header__title">Captured</h1>
+            <div class="header__image-container header__image-container--big-border">
                 <img src="./assets/header-box-image.jpg" alt="">
             </div>
         </div>
     </header>
     <main>
-        <section class="about">
-            <div class="wrapper">
-                <h3>What is captured?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus omnis quos fugiat hic maxime totam enim vero facilis. Tenetur temporibus nisi saepe ipsum iste in, consequatur facilis ut deserunt minus repudiandae, totam molestiae, illum voluptatem magni dolorum? Vero, in! Pariatur nisi sed, numquam obcaecati aut saepe dolorum beatae suscipit deleniti!</p>
-                <a href="#" class="button">Find out more</a>
+        <section class="about" id="about">
+            <div class="wrapper about__container">
+                <div class="about__text-container">
+                    <h3>What is captured?</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus omnis quos fugiat hic maxime totam enim vero facilis. Tenetur temporibus nisi saepe ipsum iste in, consequatur facilis ut deserunt minus repudiandae, totam molestiae, illum voluptatem magni dolorum? Vero, in! Pariatur nisi sed, numquam obcaecati aut saepe dolorum beatae suscipit deleniti!</p>
+                    <a href="#" class="button">Find out more</a>
+                </div>
             </div>
         </section>
         <section class="articles">
-            <div class="articles__article-container">
-                <div class="articles__article-container__image-container">
+            <div class="articles__container">
+                <div class="articles__image-container articles__image-container--shadow-right">
                     <img src="./assets/left-image.jpg" alt="">
                 </div>
-                <div class="articles__article-container__text-container">
+                <div class="articles__text-container">
                     <h4>Unlock your skills</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nesciunt autem reiciendis aliquam quia perferendis voluptatibus ratione earum pariatur, esse quibusdam. Voluptate, nam eos, consequatur porro assumenda commodi ex aliquid tempore fuga temporibus, asperiores ratione obcaecati inventore ut necessitatibus veniam.</p>
                     <a href="#" class="button">Read more</a>
                 </div>
             </div>
-            <div class="articles__article-container">
-                <div class="articles__article-container__image-container">
+            <div class="articles__container">
+                <div class="articles__image-container articles__image-container--shadow-left">
                     <img src="./assets/right-image.jpg" alt="">
                 </div>
-                <div class="articles__article-container__text-container">
+                <div class="articles__text-container">
                     <h4>Getting new gear</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit asperiores perferendis nostrum eveniet vel magni exercitationem. Itaque aperiam earum libero facilis nobis sunt impedit eligendi, quibusdam culpa inventore, ut possimus quod nam pariatur quidem architecto repellendus provident cum. Quo, commodi.</p>
                     <a href="#" class="button">Read more</a>
@@ -58,47 +58,66 @@
             </div>
         </section>
         <section class="links">
-            <div class="wrapper">
-                <div class="links__text-container">
-                    <h4>Top picks</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quas quis vitae dolorem distinctio quos impedit cupiditate aliquid officiis! Dolores dolor architecto voluptatibus quos qui!</p>
-                </div>
-                <div class="links__text-container">
-                    <h4>Community</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nisi rem, culpa non tempora ullam velit, qui veritatis fugiat natus aspernatur! Ullam et facilis culpa!</p>
-                </div>
-                <div class="links__text-container">
-                    <h4>Blog</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, repellat eos esse obcaecati inventore impedit blanditiis culpa ullam nobis fugiat soluta excepturi qui laboriosam. Maxime?</p>
-                </div>
-                <div class="links__text-container">
-                    <h4>Get in touch</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, optio. Repudiandae minima id ipsam impedit fuga delectus sint quae, iure sunt, aperiam nam architecto hic?</p>
-                </div>
+            <div class="wrapper links__container">
+                <a href="">
+                    <div class="links__text-container">
+                        <h4>Top picks</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quas quis vitae dolorem distinctio quos impedit cupiditate aliquid officiis! Dolores dolor architecto voluptatibus quos qui!</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="links__text-container">
+                        <h4>Community</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nisi rem, culpa non tempora ullam velit, qui veritatis fugiat natus aspernatur! Ullam et facilis culpa!</p>
+                    </div>
+                </a>
+                <a href="blog.html">
+                    <div class="links__text-container">
+                        <h4>Blog</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, repellat eos esse obcaecati inventore impedit blanditiis culpa ullam nobis fugiat soluta excepturi qui laboriosam. Maxime?</p>
+                    </div>
+                </a>
+                <a href="contact.html">
+                    <div class="links__text-container">
+                        <h4>Get in touch</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, optio. Repudiandae minima id ipsam impedit fuga delectus sint quae, iure sunt, aperiam nam architecto hic?</p>
+                    </div>
+                </a>
             </div>
         </section>
         <section class="big-picture">
+            <div class="big-picture__image-container">
+                <img src="./assets/banner.jpg" alt="">
+            </div>
         </section>
         <section class="profile">
-            <div class="profile__image-container">
-                <img src="./assets/small-box.jpg" alt="">
-            </div>
-            <div class="profile__text-container">
-                <h3>This month profile</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum provident illum suscipit amet quod obcaecati dolores officiis distinctio a nisi, excepturi rem, nihil ratione corporis itaque delectus expedita, non odio harum modi corrupti? Illum quod ipsum sit obcaecati, sunt et officiis magni reprehenderit, neque esse blanditiis rerum odit voluptatem impedit.</p>
-                <a href="#" class="button">Find out more</a>
+            <div class="wrapper profile__container">
+                <div class="profile__image-container profile__image-container--shadow-right">
+                    <img src="./assets/small-box.jpg" alt="">
+                </div>
+                <div class="profile__text-container">
+                    <h3>This month profile</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum provident illum suscipit amet quod obcaecati dolores officiis distinctio a nisi, excepturi rem, nihil ratione corporis itaque delectus expedita, non odio harum modi corrupti? Illum quod ipsum sit obcaecati, sunt et officiis magni reprehenderit, neque esse blanditiis rerum odit voluptatem impedit.</p>
+                    <a href="#" class="button">Find out more</a>
+                </div>
             </div>
         </section>
         <section class="gallery">
-            <img src="./assets/gallery-image-1.jpg" alt="">
-            <img src="./assets/gallery-image-2.jpg" alt="">
-            <img src="./assets/gallery-image-3.jpg" alt="">
+            <div class="wrapper gallery__container">
+                <div class="gallery__image-container">
+                    <img src="./assets/gallery-image-1.jpg" alt="">
+                </div>
+                <div class="gallery__image-container">
+                    <img src="./assets/gallery-image-2.jpg" alt="">
+                </div>
+                <div class="gallery__image-container">
+                    <img src="./assets/gallery-image-3.jpg" alt="">
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        <div class="wrapper">
-            <p>Copyright &copy; 2018 HackerYou</p>
-        </div>
+        <p>Copyright &copy; 2018 HackerYou</p>
     </footer>
 </body>
 </html>
