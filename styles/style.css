@@ -234,3 +234,125 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #EFFDF3;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  color: #2C2C2C;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, nav, button, .button {
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 13.8rem;
+}
+
+h2 {
+  font-size: 8rem;
+  line-height: 9.2rem;
+}
+
+h3 {
+  font-size: 4.2rem;
+  letter-spacing: 0.1rem;
+}
+
+h4 {
+  font-size: 3.2rem;
+  letter-spacing: 0.1rem;
+}
+
+h5 {
+  font-size: 2.6rem;
+  letter-spacing: 0.011rem;
+}
+
+a {
+  text-decoration: none;
+  color: #2C2C2C;
+}
+
+nav, button, .button {
+  letter-spacing: 0.1rem;
+}
+
+header {
+  width: 100vw;
+  background-repeat: no-repeat;
+}
+
+footer {
+  background-color: #2C2C2C;
+  color: #FAFAFA;
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header__nav {
+  width: 50%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__nav li {
+  padding: 2rem;
+  color: inherit;
+  text-align: right;
+}
+
+ul {
+  padding: 0;
+}
+
+.home header {
+  background-size: contain;
+  background-image: url(../assets/header-image.jpg);
+}
+
+.home .articles,
+.home .gallery {
+  background-color: #FAFAFA;
+}
+
+.blog header {
+  background-image: url(../assets/blog-header.jpg);
+}
+
+.contact header {
+  background-image: url(../assets/contact-header.jpg);
+}

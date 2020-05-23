@@ -9,21 +9,21 @@
     <link rel="icon" type="image/svg" href="./assets/camera-favicon.svg">
     <script src="https://kit.fontawesome.com/a9bc7af8fb.js" crossorigin="anonymous"></script>
 </head>
-<body class="main-page">
+<body class="home">
     <header class="header">
-        <div class="wrapper">
-            <nav class="header__nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
+        <div class="header__wrapper wrapper">
+            <nav>
+                <ul class="header__nav">
+                    <li><a class="header__nav--current"href="index.html">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <h1 class="header__title">Captured</h1>
-            <div class="header__image-container header__image-container--big-border">
-                <img src="./assets/header-box-image.jpg" alt="">
-            </div>
+        </div>
+        <div class="header__image-container header__image-container--big-border">
+            <img src="./assets/header-box-image.jpg" alt="">
         </div>
     </header>
     <main>
@@ -47,7 +47,7 @@
                     <a href="#" class="button">Read more</a>
                 </div>
             </div>
-            <div class="articles__container">
+            <div class="articles__container articles__container--highlight">
                 <div class="articles__image-container articles__image-container--shadow-left">
                     <img src="./assets/right-image.jpg" alt="">
                 </div>
@@ -104,7 +104,7 @@
             </div>
         </section>
         <section class="gallery">
-            <div class="wrapper gallery__container">
+            <div class="wrapper gallery__container gallery__container--highlight">
                 <div class="gallery__image-container">
                     <img src="./assets/gallery-image-1.jpg" alt="">
                 </div>

@@ -1,0 +1,10 @@
+.home {
+    header {
+        background-size: contain;
+        background-image: url(../assets/header-image.jpg);
+    }
+    .articles,
+    .gallery {
+        background-color: $secondary-background-hex;
+    }
+}

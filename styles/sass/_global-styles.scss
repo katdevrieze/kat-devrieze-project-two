@@ -1,16 +1,106 @@
+// FONTS
 $serif: 'Playfair Display', serif;
 $sans-serif: 'Roboto', sans-serif;
-$yellow-hex: #FDFA69;
-$yellow-rgb: rgb(253, 250,105);
-$green-hex: #4CEEA7;
-$green-rgb: rgb(76,238, 167);
-$black-hex: #2C2C2C;
-$black-rgb: rgb(44, 44, 44);
-$white-hex: #FAFAFA;
-$white-rgb: rgb(250, 250, 250);
-$mint-hex: #EFFDF3;
-$mint-rgb: rgb(239, 253, 243);
+// FONT STYLING
+$body-size: 2rem; //also applies to nav and buttons/.buttons
+$body-line: 3.2rem; //also applies to buttons/.buttons
+$h1-size: 13.8rem;
+$h2-size: 8.0rem;
+$h2-line: 9.2rem;
+$h3-size: 4.2rem;
+$h4-size: 3.2rem;
+$nav-line: 2.9rem;
+$h5-size: 2.6rem;
+$h5-letter-space: 0.011rem;
+$letter-space: 0.1rem; //applies to h3, h4, nav, button, and .button
+// COLORS
+$primary-accent-hex: #FDFA69;
+$primary-accent-rgb: rgb(253, 250,105);
+$secondary-accent-hex: #4CEEA7;
+$secondary-accent-rgb: rgb(76,238, 167);
+$text-hex: #2C2C2C;
+$text-rgb: rgb(44, 44, 44);
+$primary-background-hex: #EFFDF3;
+$primary-background-rgb: rgb(239, 253, 243);
+$secondary-background-hex: #FAFAFA;
+$secondary-background-rgb: rgb(250, 250, 250);
 
 // button-hover
 // navigation-hover
 // navigation-current page
+
+// Fonts & Backgrounds
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: $primary-background-hex;
+    font-family: $sans-serif;
+    font-size: $body-size;
+    line-height: $body-line;
+    color: $text-hex;
+}
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, nav, button, .button {
+    font-family: $serif;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: $h1-size;
+}
+h2 {
+    font-size: $h2-size;
+    line-height: $h2-line;
+}
+h3 {
+    font-size: $h3-size;
+    letter-spacing: $letter-space;
+}
+h4 {
+    font-size: $h4-size;
+    letter-spacing: $letter-space;
+}
+h5 {
+    font-size: $h5-size;
+    letter-spacing: $h5-letter-space;
+}
+a {
+    text-decoration: none;
+    color: $text-hex;
+}
+nav, button, .button {
+    letter-spacing: $letter-space;
+}
+header {
+    width: 100vw;
+    background-repeat: no-repeat;
+}
+
+footer {
+    background-color: $text-hex;
+    color: $secondary-background-hex;
+}
+// layout
+.header__wrapper {
+    @include flex(column);
+    align-items: flex-end;
+}
+.header__nav {
+    width: 50%;
+    list-style: none;
+    @include flex(row);
+    justify-content: space-between;
+    & li {
+        padding: 2rem;
+        color: inherit;
+        text-align: right;
+    }
+}
+// spacing
+ul {
+    padding: 0
+}
