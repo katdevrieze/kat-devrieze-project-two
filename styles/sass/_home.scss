@@ -1,10 +1,152 @@
 .home {
-    header {
-        background-size: contain;
-        background-image: url(../assets/header-image.jpg);
-    }
+    // backgrounds
     .articles,
     .gallery {
         background-color: $secondary-background-hex;
+    }
+    // header
+    .header {
+        height: 100vh;
+        background-image: url(../assets/header-image.jpg);
+        position: relative;
+        @include flex(column);
+        justify-content: space-between;
+        & h1 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 25%;
+            z-index: 100;
+        }
+        &__image-container {
+            width: 45%;
+            align-self: flex-end;
+            position: relative;
+            //border overhanging next section to create flow
+            bottom: -5vh;
+            &--big-border {
+                @include big-border;
+            }
+        }
+    }
+    // about
+    .about {
+        // to account for border & image overhang
+        margin: $margin-spacing 0;
+        text-align: center;
+        &__text-container{
+            padding: $margin-spacing;
+         & p {
+            padding: $p-spacing;
+            }
+        }
+    }
+    // articles
+    .articles {
+        // flexing opposite directions to alternate images
+        &__container:nth-of-type(odd) {
+            @include flex(row);
+            margin-bottom: 5vw;
+        }
+        &__container:nth-of-type(even) {
+            @include flex(row-reverse);
+        }
+        &__container {
+            flex-wrap: nowrap;
+        }
+        &__image-container {
+            // to account for box shadow
+            width: calc(50% - 2.5vw);
+            &--shadow-right {
+                @include shadow-right;
+                position: relative;
+                // overhang
+                bottom: $container-spacing;
+            }
+            &--shadow-left {
+                @include shadow-left;
+                position: relative;
+                // overhang
+                top: $container-spacing;
+                right: $container-spacing;
+            }
+        }
+        &__text-container {
+            width: 50%;
+            // max-width=half wrapper plus margin
+            max-width: calc(600px - 2.5vw);
+            @include flex(row);
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: center;
+            &--right {
+                margin: 0 $margin-spacing 0 5vw;
+                justify-content: flex-start;
+            }
+            &--left {
+                margin: 0 5vw 0 $margin-spacing;
+                justify-content: flex-end;
+            }
+            & p {
+                padding: $p-spacing;
+            }
+        }
+    }
+    // links
+    .links {
+        padding: $margin-spacing 0;
+        &__container {
+        @include flex(row);
+        flex-wrap: wrap;
+        }
+        &__text-container {
+            width: calc(50% - 5vw);
+            margin-left: 5vw;
+            position: relative;
+            &::before {
+                content: " ";
+                height: $h3-size;
+                width: $h3-size;
+                border-radius: 50%;
+                background-color: $secondary-accent-hex;
+                position: absolute;
+                top: 0;
+                left: -4vw;
+            }
+        }
+    }
+    // profile
+    .profile {
+        padding: $margin-spacing 0;
+        &__container {
+            @include flex(row);
+            justify-content: space-between;
+        }
+        &__image-container {
+            // width of 1st gallery item minus margin
+            width: calc((100% - 5vw) / 3 - 5vw);
+            &--shadow-right {
+                @include shadow-right;
+            }
+        }
+        &__text-container {
+            // to line up with 2nd gallery item
+            width: calc((100% - 5vw) / 3 * 2 + 2.5vw);
+            & p {
+                padding: $p-spacing;
+            }
+        }
+    }
+    // gallery
+    .gallery {
+        padding: $margin-spacing 0;
+        &__container {
+            @include flex(row);
+            justify-content: space-between;
+        }
+        &__image-container {
+            // to keep spacing consistent with box shadows
+            width: calc((100% - 5vw) / 3);
+        }
     }
 }

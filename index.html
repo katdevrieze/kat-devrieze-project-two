@@ -12,12 +12,12 @@
 <body class="home">
     <header class="header">
         <div class="header__wrapper wrapper">
-            <nav>
-                <ul class="header__nav">
-                    <li><a class="header__nav--current"href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="index.html"><p class= "header__nav--current" >Home</p></a></li>
+                    <li><a href="#about"><p>About</p></a></li>
+                    <li><a href="blog.html"><p>Blog</p></a></li>
+                    <li><a href="contact.html"><p>Contact</p></a></li>
                 </ul>
             </nav>
             <h1 class="header__title">Captured</h1>
@@ -36,22 +36,22 @@
                 </div>
             </div>
         </section>
-        <section class="articles">
+        <section class="articles articles--highlight">
             <div class="articles__container">
-                <div class="articles__image-container articles__image-container--shadow-right">
-                    <img src="./assets/left-image.jpg" alt="">
+                <div class="articles__image-container">
+                    <img src="./assets/left-image.jpg" alt="" class="articles__image-container--shadow-right">
                 </div>
-                <div class="articles__text-container">
+                <div class="articles__text-container articles__text-container--right">
                     <h4>Unlock your skills</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nesciunt autem reiciendis aliquam quia perferendis voluptatibus ratione earum pariatur, esse quibusdam. Voluptate, nam eos, consequatur porro assumenda commodi ex aliquid tempore fuga temporibus, asperiores ratione obcaecati inventore ut necessitatibus veniam.</p>
                     <a href="#" class="button">Read more</a>
                 </div>
             </div>
-            <div class="articles__container articles__container--highlight">
-                <div class="articles__image-container articles__image-container--shadow-left">
-                    <img src="./assets/right-image.jpg" alt="">
+            <div class="articles__container">  
+                <div class="articles__image-container">
+                    <img src="./assets/right-image.jpg" alt="" class="articles__image-container--shadow-left">
                 </div>
-                <div class="articles__text-container">
+                <div class="articles__text-container articles__text-container--left">
                     <h4>Getting new gear</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit asperiores perferendis nostrum eveniet vel magni exercitationem. Itaque aperiam earum libero facilis nobis sunt impedit eligendi, quibusdam culpa inventore, ut possimus quod nam pariatur quidem architecto repellendus provident cum. Quo, commodi.</p>
                     <a href="#" class="button">Read more</a>
@@ -60,30 +60,22 @@
         </section>
         <section class="links">
             <div class="wrapper links__container">
-                <a href="">
-                    <div class="links__text-container">
-                        <h4>Top picks</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quas quis vitae dolorem distinctio quos impedit cupiditate aliquid officiis! Dolores dolor architecto voluptatibus quos qui!</p>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="links__text-container">
-                        <h4>Community</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nisi rem, culpa non tempora ullam velit, qui veritatis fugiat natus aspernatur! Ullam et facilis culpa!</p>
-                    </div>
-                </a>
-                <a href="blog.html">
-                    <div class="links__text-container">
-                        <h4>Blog</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, repellat eos esse obcaecati inventore impedit blanditiis culpa ullam nobis fugiat soluta excepturi qui laboriosam. Maxime?</p>
-                    </div>
-                </a>
-                <a href="contact.html">
-                    <div class="links__text-container">
-                        <h4>Get in touch</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, optio. Repudiandae minima id ipsam impedit fuga delectus sint quae, iure sunt, aperiam nam architecto hic?</p>
-                    </div>
-                </a>
+                <div class="links__text-container">
+                    <h4>Top picks</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quas quis vitae dolorem distinctio quos impedit cupiditate aliquid officiis! Dolores dolor architecto voluptatibus quos qui!</p>
+                </div>
+                <div class="links__text-container">
+                    <h4>Community</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nisi rem, culpa non tempora ullam velit, qui veritatis fugiat natus aspernatur! Ullam et facilis culpa!</p>
+                </div>
+                <div class="links__text-container">
+                    <h4>Blog</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, repellat eos esse obcaecati inventore impedit blanditiis culpa ullam nobis fugiat soluta excepturi qui laboriosam. Maxime?</p>
+                </div>
+                <div class="links__text-container">
+                    <h4>Get in touch</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, optio. Repudiandae minima id ipsam impedit fuga delectus sint quae, iure sunt, aperiam nam architecto hic?</p>
+                </div>
             </div>
         </section>
         <section class="big-picture">
@@ -93,8 +85,8 @@
         </section>
         <section class="profile">
             <div class="wrapper profile__container">
-                <div class="profile__image-container profile__image-container--shadow-right">
-                    <img src="./assets/small-box.jpg" alt="">
+                <div class="profile__image-container">
+                    <img src="./assets/small-box.jpg" alt="" class="profile__image-container--shadow-right">
                 </div>
                 <div class="profile__text-container">
                     <h3>This month profile</h3>

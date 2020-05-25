@@ -1,4 +1,28 @@
-@mixin flex($direction) {
+@mixin flex($flex-direction) {
     display: flex;
-    flex-direction: $direction;
+    flex-direction: $flex-direction;
+}
+@mixin shadow-right {
+    box-shadow: 2.5vw 2.5vw $primary-accent-hex;
+    margin: 0 2.5vw 2.5vw 0,
+}
+@mixin shadow-left {
+    box-shadow: -2.5vw 2.5vw $primary-accent-hex;
+    margin: 0 0 2.5vw 2.5vw;
+}
+@mixin border-left {
+    border-color: $primary-accent-hex;
+    border-style: solid;
+    border-width: 0 0 0.5rem 0.5rem;
+}
+@mixin button-style {
+
+}
+@mixin button-style-hover {
+
+}
+
+@mixin big-border {
+    background-color: $primary-accent-hex;
+    padding: 2.5% 0 2.5% 2.5%;
 }

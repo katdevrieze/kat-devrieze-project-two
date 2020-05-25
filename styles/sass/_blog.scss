@@ -1,5 +1,53 @@
 .blog {
-    & header {
-        background-image: url(../assets/blog-header.jpg);
+    background-image: url(../assets/blog-header.jpg);
+    background-attachment: fixed;
+    section {
+        background-color: $primary-background-hex;
+    }
+    .blog-post {
+        &__image-container {
+            &--shadow-left {
+                @include shadow-left;
+                position: relative;
+                bottom: 2.5vw;
+            }
+        }
+        &--border-left {
+            @include border-left;
+        }
+        &__text-container {
+            margin: 0 10% $container-spacing $container-spacing;
+        }
+    }
+    .aside {
+        &__text-container {
+            &--highlight {
+                background-color: $secondary-background-hex;
+            }
+        }
+    }
+}
+.sub-page {
+    header {
+        // to accomodate positioning;
+        height: 40vh;
+        @include flex(column);
+        justify-content: space-between;
+        & h2 {
+            margin-left: calc(100% / 3 + 2vw);
+            // to accomodate positioning
+            margin-bottom: 2.5vw;
+        }
+    }
+    main {
+        @include flex(row-reverse);
+    }
+    .column-wrapper {
+        width: 70%;
+    }
+    aside {
+        width: 30%;
+        margin-top: 20%;
+        margin-left: 10%;
     }
 }
