@@ -1,3 +1,14 @@
 .contact {
     background-image: url(../assets/contact-header.jpg);
 }
+.contact-form {
+    &--highlight {
+        background-color: $secondary-background-hex;
+        padding: $container-spacing;
+    }
+    &--shadow-left {
+        @include shadow-left;
+        position: relative;
+        bottom: $container-spacing;
+    }
+}

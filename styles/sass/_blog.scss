@@ -1,6 +1,5 @@
 .blog {
     background-image: url(../assets/blog-header.jpg);
-    background-attachment: fixed;
     section {
         background-color: $primary-background-hex;
     }
@@ -9,45 +8,43 @@
             &--shadow-left {
                 @include shadow-left;
                 position: relative;
-                bottom: 2.5vw;
+                bottom: $container-spacing;
             }
         }
-        &--border-left {
-            @include border-left;
-        }
         &__text-container {
-            margin: 0 10% $container-spacing $container-spacing;
+            position: relative;
+            padding-top: $container-spacing;
+            bottom: $container-spacing;
+            &--border-left {
+                @include border-left;
+            }
+            &  p:first-of-type {
+                padding: $p-spacing;
+            }
+        }
+    }
+    .comments {
+        &__container {
+            @include flex(row);
+            flex-wrap: nowrap;
+            padding: $p-spacing
+        }
+        &__image-container {
+            width: 25%;
+            margin-right: $container-spacing;
+        }
+        &__text-container p:first-of-type {
+            padding-bottom: 1rem;
         }
     }
     .aside {
+        &__image-container {
+        }
         &__text-container {
+            margin: 0 $container-spacing 0 10vw;
             &--highlight {
                 background-color: $secondary-background-hex;
             }
         }
-    }
-}
-.sub-page {
-    header {
-        // to accomodate positioning;
-        height: 40vh;
-        @include flex(column);
-        justify-content: space-between;
-        & h2 {
-            margin-left: calc(100% / 3 + 2vw);
-            // to accomodate positioning
-            margin-bottom: 2.5vw;
-        }
-    }
-    main {
-        @include flex(row-reverse);
-    }
-    .column-wrapper {
-        width: 70%;
-    }
-    aside {
-        width: 30%;
-        margin-top: 20%;
-        margin-left: 10%;
     }
 }

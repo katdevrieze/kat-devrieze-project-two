@@ -14,6 +14,10 @@
             <div class="header__wrapper wrapper">
                 <nav class="header__nav">
                     <ul>
+                        <div class="header__nav__hamburger">
+                            <label for="hamburger"><i class="fas fa-bars"></i></label>
+                            <input type="checkbox" name="hamburger" id="hamburger">
+                        </div>
                         <li><a href="index.html"><p>Home</p></a></li>
                         <li><a href="index.html#about"><p>About</p></a></li>
                         <li><a href="blog.html"><p>Blog</p></a></li>
@@ -24,23 +28,23 @@
             <h2 class="header-title">Get in Touch</h2>
         </header>
         <main>
-            <div class="column-wrapper">
+            <div class="column-container">
                 <section class="contact-form contact-form--shadow-left contact-form--highlight">
-                    <form action="#">
-                        <fieldset>
-                            <legend>Send us a message</legend>
-                            <label for="message-name">Name</label>
-                            <input type="text" name="message-name" id="message-name" placeholder="Name" required>
-                            <label for="message-email">Email Address</label>
-                            <input type="email" name="message-email" id="message-email" placeholder="Email address" required>
-                            <label for="message-message">Message</label>
-                            <input type="text" name="message-message" id="message-message" placeholder="Message" required>
-                            <button type="submit" class="form-button">Submit</button>
-                        </fieldset>
-                    </form>
+                        <form class=""action="#">
+                            <fieldset>
+                                <legend class="sr-only">Send us a message</legend>
+                                <label for="message-name" class="sr-only">Name</label>
+                                <input type="text" name="message-name" id="message-name" placeholder="Name" required>
+                                <label for="message-email" class="sr-only">Email Address</label>
+                                <input type="email" name="message-email" id="message-email" placeholder="Email address" required>
+                                <label for="message-message" class="sr-only">Message</label>
+                                <textarea name="message-message" placeholder="Message" required></textarea>
+                                <button type="submit" class="form-button">Submit</button>
+                            </fieldset>
+                        </form>
                 </section>
             </div>
-            <aside class="aside">
+            <aside class="aside aside-wrapper">
                 <nav class="aside__social-nav">
                     <ul>
                         <li><a href=""><i class="fab fa-facebook-f"></i></a></li>

@@ -26,15 +26,17 @@ $secondary-background-hex: #FAFAFA;
 $secondary-background-rgb: rgb(250, 250, 250);
 // SPACING
 $p-spacing: 3rem 0;
-$container-spacing: 2.5vw;
-$section-spacing: 5vh 0 5vh 0;
+$container-spacing: 4rem;
+$column-container-spacing: 0 0 4rem 4rem;
+$section-spacing: 8rem 0;
 $margin-spacing: 10%;
-
+// STYLING
+$border-accent: 0.2rem solid $secondary-accent-hex;
 // button-hover
 // navigation-hover
 // navigation-current page
 
-// Fonts & Backgrounds
+// Fonts & Backgrounds & Borders
 html {
     font-size: 62.5%;
 }
@@ -96,19 +98,37 @@ button, .button {
     padding: 1rem 2rem;
     background-color: $secondary-accent-hex;
 }
+button {
+    width: 100%;
+}
 header, body {
     width: 100vw;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top left;
 }
-
+fieldset, button, input {
+    border: none;
+}
 footer {
     background-color: $text-hex;
     color: $secondary-background-hex;
     text-align: center;
 }
+input,
+textarea {
+    background: none;
+    &::placeholder {
+        opacity: 1;
+        font-family: inherit;
+        color: inherit;
+}
+}
 // layout
+header {
+    position: relative;
+}
+
 .wrapper {
     width: 80%;
     max-width: 1200px;
@@ -125,7 +145,76 @@ footer {
         display: inline-block;
     }
     &--current {
-        border-bottom: 0.2rem solid $secondary-accent-hex;
+        border-bottom: $border-accent;
+    }
+    &__hamburger {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        display: none;
+        & input {
+            position: absolute;
+            opacity: 0;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+// sub-page
+.aside {
+    width: 40%;
+}
+.aside-wrapper {
+    margin: 0 $container-spacing 0 10vw;
+}
+.column-container {
+    width: 60%;
+}
+.column-wrapper {
+    padding: $column-container-spacing;
+    margin-right: 10vw;
+}
+.sub-page {
+    background-attachment: fixed;
+    header {
+        // to accomodate positioning;
+        height: 40vh;
+        @include flex(column);
+        justify-content: space-between;
+        & h2 {
+            margin-left: calc(40% + 4rem);
+            // to accomodate positioning
+            margin-bottom: 4rem;
+        }
+    }
+    main {
+        @include flex(row-reverse);
+        justify-content: center;
+    }
+    fieldset {
+        @include flex(row);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0;
+    }
+    input {
+        border-bottom: $border-accent;
+        // half container spacing
+        width: calc(50% - 2rem);
+        padding: 2rem;
+    }
+    textarea {
+        border: $border-accent;
+        padding: 2rem;
+        width: 100%;
+        margin: $container-spacing 0;
+        resize: none;
+        height: 30rem;
+    }
+
+    aside {
+        margin-top: 20%;
     }
 }
 // spacing

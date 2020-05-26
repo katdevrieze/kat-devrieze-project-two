@@ -8,7 +8,6 @@
     .header {
         height: 100vh;
         background-image: url(../assets/header-image.jpg);
-        position: relative;
         @include flex(column);
         justify-content: space-between;
         & h1 {
@@ -23,7 +22,7 @@
             align-self: flex-end;
             position: relative;
             //border overhanging next section to create flow
-            bottom: -5vh;
+            bottom: -2.5%;
             &--big-border {
                 @include big-border;
             }
@@ -32,7 +31,7 @@
     // about
     .about {
         // to account for border & image overhang
-        margin: $margin-spacing 0;
+        margin: $section-spacing;
         text-align: center;
         &__text-container{
             padding: $margin-spacing;
@@ -46,7 +45,7 @@
         // flexing opposite directions to alternate images
         &__container:nth-of-type(odd) {
             @include flex(row);
-            margin-bottom: 5vw;
+            margin-bottom: 8rem;
         }
         &__container:nth-of-type(even) {
             @include flex(row-reverse);
@@ -56,7 +55,7 @@
         }
         &__image-container {
             // to account for box shadow
-            width: calc(50% - 2.5vw);
+            width: calc(50% - 4rem);
             &--shadow-right {
                 @include shadow-right;
                 position: relative;
@@ -74,17 +73,17 @@
         &__text-container {
             width: 50%;
             // max-width=half wrapper plus margin
-            max-width: calc(600px - 2.5vw);
+            max-width: calc(600px - 4rem);
             @include flex(row);
             flex-wrap: wrap;
             align-items: center;
             align-content: center;
             &--right {
-                margin: 0 $margin-spacing 0 5vw;
+                margin: 0 $margin-spacing 0 8rem;
                 justify-content: flex-start;
             }
             &--left {
-                margin: 0 5vw 0 $margin-spacing;
+                margin: 0 8rem 0 $margin-spacing;
                 justify-content: flex-end;
             }
             & p {
@@ -100,8 +99,8 @@
         flex-wrap: wrap;
         }
         &__text-container {
-            width: calc(50% - 5vw);
-            margin-left: 5vw;
+            width: calc(50% - 8rem);
+            margin-left: 8rem;
             position: relative;
             &::before {
                 content: " ";
@@ -111,7 +110,7 @@
                 background-color: $secondary-accent-hex;
                 position: absolute;
                 top: 0;
-                left: -4vw;
+                left: -5rem;
             }
         }
     }
@@ -124,14 +123,14 @@
         }
         &__image-container {
             // width of 1st gallery item minus margin
-            width: calc((100% - 5vw) / 3 - 5vw);
+            width: calc((100% - 8rem) / 3 - 4rem);
             &--shadow-right {
                 @include shadow-right;
             }
         }
         &__text-container {
             // to line up with 2nd gallery item
-            width: calc((100% - 5vw) / 3 * 2 + 2.5vw);
+            width: calc((100% - 8rem) / 3 * 2 + 4rem);
             & p {
                 padding: $p-spacing;
             }
@@ -146,7 +145,7 @@
         }
         &__image-container {
             // to keep spacing consistent with box shadows
-            width: calc((100% - 5vw) / 3);
+            width: calc((100% - 8rem) / 3);
         }
     }
 }

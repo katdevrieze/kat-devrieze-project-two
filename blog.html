@@ -14,6 +14,10 @@
         <div class="header__wrapper wrapper">
             <nav class="header__nav">
                 <ul>
+                    <div class="header__nav__hamburger">
+                        <label for="hamburger"><i class="fas fa-bars"></i></label>
+                        <input type="checkbox" name="hamburger" id="hamburger">
+                    </div>
                     <li><a href="index.html"><p>Home</p></a></li>
                     <li><a href="index.html#about"><p>About</p></a></li>
                     <li><a href="blog.html"><p class= "header__nav--current" >Blog</p></a></li>
@@ -24,12 +28,12 @@
         <h2 class="header-title">Blog</h2>
     </header>
     <main>
-        <div class="column-wrapper">
-            <section class="blog-post blog-post--border-left">
+        <div class="column-container">
+            <section class="blog-post">
                 <div class="blog-post__image-container blog-post__image-container--shadow-left">
                     <img src="./assets/blog-post-image.jpg" alt="">
                 </div>
-                <div class="blog-post__text-container">
+                <div class="blog-post__text-container blog-post__text-container--border-left column-wrapper">
                     <h3>Finding Great Locations</h3>
                     <p>Monday, May 4th, 2019 by Dieula</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque magni voluptatem nam porro ea praesentium tempora iure sit nesciunt, aliquam qui, labore veritatis alias? Maxime nobis debitis earum laboriosam minus!</p>
@@ -42,36 +46,38 @@
                 </div>
             </section>
             <section class="comments">
-                <h4>Comments</h4>
-                <div class="comment-container">
-                    <div class="comment-container__image-container">
-                        <img src="./assets/comment-1.jpg" alt="">
+                <div class="column-wrapper">
+                    <h4>Comments</h4>
+                    <div class="comments__container">
+                        <div class="comments__image-container">
+                            <img src="./assets/comment-1.jpg" alt="">
+                        </div>
+                        <div class="comments__text-container">
+                            <p>Tuesday, October 9th, 2018 by Jeremy</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum earum ab, perferendis nulla veritatis labore eaque excepturi non quis nemo quibusdam, ut dicta harum officia voluptates assumenda illo facilis atque.</p>
+                        </div>
                     </div>
-                    <div class="comment-container__text-container">
-                        <p>Tuesday, October 9th, 2018 by Jeremy</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum earum ab, perferendis nulla veritatis labore eaque excepturi non quis nemo quibusdam, ut dicta harum officia voluptates assumenda illo facilis atque.</p>
-                    </div>
-                </div>
-                <div class="comment-container">
-                    <div class="comment-container__image-container">
-                        <img src="./assets/comment-2.jpg" alt="">
-                    </div>
-                    <div class="comment-container__text-container">
-                        <p>Tuesday, October 10th, 2018 by Julia</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum earum ab, perferendis nulla veritatis labore eaque excepturi non quis nemo quibusdam, ut dicta harum officia voluptates assumenda illo facilis atque.</p>
+                    <div class="comments__container">
+                        <div class="comments__image-container">
+                            <img src="./assets/comment-2.jpg" alt="">
+                        </div>
+                        <div class="comments__text-container">
+                            <p>Tuesday, October 10th, 2018 by Julia</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum earum ab, perferendis nulla veritatis labore eaque excepturi non quis nemo quibusdam, ut dicta harum officia voluptates assumenda illo facilis atque.</p>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="blog-form">
-                <form action="#">
+                <form class ="column-wrapper action="#">
                     <fieldset>
-                        <legend>Add a Comment</legend>
-                        <label for="comment-name">Name</label>
+                        <legend class="sr-only">Add a Comment</legend>
+                        <label for="comment-name" class="sr-only">Name</label>
                         <input type="text" name="comment-name" id="comment-name" placeholder="Name" required>
-                        <label for="comment-email">Email Address</label>
+                        <label for="comment-email" class="sr-only">Email Address</label>
                         <input type="email" name="comment-email" id="comment-email" placeholder="Email address" required>
-                        <label for="comment-comment">Comment</label>
-                        <input type="text" name="comment-comment" id="comment-comment" placeholder="Comment" required>
+                        <label for="comment-comment" class="sr-only">Comment</label>
+                        <textarea name="comment-comment" placeholder="Comment" required></textarea>
                         <button type="submit" class="form-button">Post Comment</button>
                     </fieldset>
                 </form>
@@ -81,16 +87,18 @@
             <div class="aside__image-container">
                 <img src="./assets/side-blog-image.jpg" alt="">
             </div>
-            <div class=" aside__text-container aside__text-container--highlight">
-                <h5>About Captured</h5>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum qui ratione, pariatur aliquam possimus nulla. <a href="">Find out More.</a></p>
-                <h5>Recent Posts</h5>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                </ul>
+            <div class="aside-wrapper">
+                <div class="aside__text-container aside__text-container--highlight">
+                    <h5>About Captured</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum qui ratione, pariatur aliquam possimus nulla. <a href="">Find out More.</a></p>
+                    <h5>Recent Posts</h5>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                </div>
             </div>
         </aside>
     </main>
