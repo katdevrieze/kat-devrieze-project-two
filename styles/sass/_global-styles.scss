@@ -94,12 +94,24 @@ nav ul {
 nav, button, .button {
     letter-spacing: $letter-space;
 }
-button, .button {
+button, 
+.button {
     padding: 1rem 2rem;
     background-color: $secondary-accent-hex;
+    &:hover,
+    &:focus-within,
+    &:focus {
+        background-color: lighten($color: $secondary-accent-hex, $amount: 15%);
+    }
+    &:active {
+        background-color: darken($color: $secondary-accent-hex, $amount: 15%);
+    }
 }
 button {
     width: 100%;
+    &:hover {
+        cursor: pointer;
+    }
 }
 header, body {
     width: 100vw;
@@ -128,7 +140,13 @@ textarea {
 header {
     position: relative;
 }
-
+h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30%;
+    z-index: 100;
+}
 .wrapper {
     width: 80%;
     max-width: 1200px;
@@ -147,14 +165,25 @@ header {
     &--current {
         border-bottom: $border-accent;
     }
+    & p {
+        &:hover,
+        &:focus-within,
+        &:focus {
+            border: $border-accent;
+            // to account for border accent
+            margin: -0.2rem;
+        }
+        &:active {
+            background-color: $secondary-accent-hex;
+        }
+    }
     &__hamburger {
         position: absolute;
         top: 2rem;
         right: 2rem;
         display: none;
-        & input {
-            position: absolute;
-            opacity: 0;
+        & i {
+            font-size: 3rem;
         }
         &:hover {
             cursor: pointer;
@@ -191,6 +220,8 @@ header {
     main {
         @include flex(row-reverse);
         justify-content: center;
+        max-width: 1500px;
+        margin: 0 auto;
     }
     fieldset {
         @include flex(row);
@@ -215,6 +246,9 @@ header {
 
     aside {
         margin-top: 20%;
+    }
+    footer {
+        margin-top: 8rem;
     }
 }
 // spacing

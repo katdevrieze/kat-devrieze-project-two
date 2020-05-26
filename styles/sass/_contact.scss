@@ -1,5 +1,18 @@
 .contact {
     background-image: url(../assets/contact-header.jpg);
+    .column-container {
+        margin-right: calc(10vw - 4rem);
+    }
+    .aside {
+        width: calc(40% - 8vw);
+        &__text-container {
+            background-color: $primary-background-hex;
+            padding: 2rem;
+        }
+        &__social-nav li {
+            padding: 2rem 2rem 2rem 0;
+        }
+    }
 }
 .contact-form {
     &--highlight {

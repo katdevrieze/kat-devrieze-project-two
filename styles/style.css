@@ -311,13 +311,30 @@ nav, button, .button {
   letter-spacing: 0.1rem;
 }
 
-button, .button {
+button,
+.button {
   padding: 1rem 2rem;
   background-color: #4CEEA7;
 }
 
+button:hover, button:focus-within, button:focus,
+.button:hover,
+.button:focus-within,
+.button:focus {
+  background-color: #92f5c9;
+}
+
+button:active,
+.button:active {
+  background-color: #15d983;
+}
+
 button {
   width: 100%;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 header, body {
@@ -374,6 +391,14 @@ header {
   position: relative;
 }
 
+h1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30%;
+  z-index: 100;
+}
+
 .wrapper {
   width: 80%;
   max-width: 1200px;
@@ -408,6 +433,15 @@ header {
   border-bottom: 0.2rem solid #4CEEA7;
 }
 
+.header__nav p:hover, .header__nav p:focus-within, .header__nav p:focus {
+  border: 0.2rem solid #4CEEA7;
+  margin: -0.2rem;
+}
+
+.header__nav p:active {
+  background-color: #4CEEA7;
+}
+
 .header__nav__hamburger {
   position: absolute;
   top: 2rem;
@@ -415,9 +449,8 @@ header {
   display: none;
 }
 
-.header__nav__hamburger input {
-  position: absolute;
-  opacity: 0;
+.header__nav__hamburger i {
+  font-size: 3rem;
 }
 
 .header__nav__hamburger:hover {
@@ -475,6 +508,8 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .sub-page fieldset {
@@ -512,6 +547,10 @@ header {
   margin-top: 20%;
 }
 
+.sub-page footer {
+  margin-top: 8rem;
+}
+
 img {
   display: block;
   width: 100%;
@@ -541,20 +580,12 @@ ul {
           justify-content: space-between;
 }
 
-.home .header h1 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 25%;
-  z-index: 100;
-}
-
 .home .header__image-container {
   width: 45%;
   -ms-flex-item-align: end;
       align-self: flex-end;
   position: relative;
-  bottom: -2.5%;
+  bottom: -10%;
 }
 
 .home .header__image-container--big-border {
@@ -802,8 +833,19 @@ ul {
   padding-bottom: 1rem;
 }
 
-.blog .aside__text-container {
-  margin: 0 4rem 0 10vw;
+.blog .aside__image-container {
+  width: calc(100% - 5rem);
+  position: relative;
+}
+
+.blog .aside__image-container::after {
+  content: " ";
+  position: absolute;
+  background-color: #FAFAFA;
+  width: 1rem;
+  left: calc(40vw - 5rem);
+  top: 2.5rem;
+  bottom: 0;
 }
 
 .blog .aside__text-container--highlight {
@@ -812,6 +854,23 @@ ul {
 
 .contact {
   background-image: url(../assets/contact-header.jpg);
+}
+
+.contact .column-container {
+  margin-right: calc(10vw - 4rem);
+}
+
+.contact .aside {
+  width: calc(40% - 8vw);
+}
+
+.contact .aside__text-container {
+  background-color: #EFFDF3;
+  padding: 2rem;
+}
+
+.contact .aside__social-nav li {
+  padding: 2rem 2rem 2rem 0;
 }
 
 .contact-form--highlight {
@@ -825,4 +884,112 @@ ul {
   margin: 0 0 4rem 4rem;
   position: relative;
   bottom: 4rem;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    bottom: 45%;
+    font-size: 10rem;
+  }
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  h1 {
+    font-size: 8rem;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .header__nav__hamburger {
+    display: block;
+  }
+  .header__nav ul {
+    display: none;
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    background-color: #FAFAFA;
+    padding-right: 4rem;
+  }
+  .header__nav input[type=checkbox]:checked + ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home .articles__container,
+  .home .links__container,
+  .home .profile__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .home .articles__text-container,
+  .home .links__text-container,
+  .home .profile__text-container {
+    width: 100%;
+  }
+  .home .articles__text-container--left, .home .articles__text-container--right,
+  .home .links__text-container--left,
+  .home .links__text-container--right,
+  .home .profile__text-container--left,
+  .home .profile__text-container--right {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home .articles__text-container--left,
+  .home .links__text-container--left,
+  .home .profile__text-container--left {
+    padding-top: 8rem;
+  }
+  .home .articles__image-container,
+  .home .links__image-container,
+  .home .profile__image-container {
+    width: 80%;
+  }
+  .home .links__text-container {
+    padding: 3rem 0;
+  }
+  .home .links__text-container::before {
+    top: 3rem;
+  }
+  .home .profile__text-container {
+    padding-top: 4rem;
+  }
+  h2 {
+    font-size: 6rem;
+  }
+  .sub-page main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sub-page .column-container,
+  .sub-page .aside {
+    width: 100%;
+  }
+  .sub-page .column-container__image-container::after,
+  .sub-page .aside__image-container::after {
+    display: none;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  body {
+    font-size: 1.6rem;
+  }
 }

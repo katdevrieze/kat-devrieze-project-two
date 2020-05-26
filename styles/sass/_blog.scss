@@ -39,9 +39,20 @@
     }
     .aside {
         &__image-container {
+            width: calc(100% - 5rem);
+            position: relative;
+            &::after {
+                content: " ";
+                position: absolute;
+                background-color: $secondary-background-hex;
+                width: 1rem;
+                left: calc(40vw - 5rem);
+                top: 2.5rem;
+                bottom: 0;
+
+            }
         }
         &__text-container {
-            margin: 0 $container-spacing 0 10vw;
             &--highlight {
                 background-color: $secondary-background-hex;
             }
